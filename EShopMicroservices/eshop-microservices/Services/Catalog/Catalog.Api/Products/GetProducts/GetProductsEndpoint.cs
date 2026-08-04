@@ -1,0 +1,24 @@
+﻿using Catalog.Api.Model;
+using Catalog.Api.Products.CreateProduct;
+
+namespace Catalog.Api.Products.GetProducts;
+
+//public record GetProductRequest(Guid Id);
+public record GetProductResponse(IEnumerable<Product> products);
+public class GetProductsEndpoint : ICarterModule
+    {
+    public void AddRoutes(IEndpointRouteBuilder app)
+        {
+        app.MapGet("/products", async (ISender sender) =>
+        {
+            var result = await sender.Send(new GetProductsQuery());
+            var response = result.Adapt<GetProductResponse>();
+            return Results.Ok(response);
+        }).WithName("GetProducts")
+            .Produces<CreateProductResponse>(StatusCodes.Status201Created)
+            .ProducesProblem(StatusCodes.Status400BadRequest)
+            .WithSummary("Get Products")
+            .WithDescription("Get Products");
+        }
+    }
+
