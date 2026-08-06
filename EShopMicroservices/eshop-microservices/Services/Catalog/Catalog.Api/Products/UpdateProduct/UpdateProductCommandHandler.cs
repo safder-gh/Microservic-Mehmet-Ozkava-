@@ -25,7 +25,7 @@ internal class UpdateProductCommandHandler(IDocumentSession session) : ICommandH
         if (product is null) throw new ProductNotFoundException(command.Id);
         product.Name = command.Name;
         product.Description = command.Description;
-        product.Category = command.Category;
+        product.Categories = command.Category;
         product.ImageFile = command.ImageFile;
         product.Price = command.Price;
         session.Update(product);

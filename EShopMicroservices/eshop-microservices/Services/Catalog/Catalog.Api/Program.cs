@@ -1,4 +1,5 @@
 
+using Catalog.Api.Data;
 using Marten;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
@@ -17,6 +18,7 @@ builder.Services.AddMarten(option =>
 {
     option.Connection(builder.Configuration.GetConnectionString("database")!);
 }).UseLightweightSessions();
+if (builder.Environment.IsDevelopment()) builder.Services.InitializeMartenWith<CatalogInitialData>();
 builder.Services.AddExceptionHandler<CustomExceptionHandler>();
 var app = builder.Build();
 app.MapCarter();

@@ -9,7 +9,7 @@ internal class GetProductByCategoryQueryHandler(IDocumentSession session) : IQue
     {
     public async Task<GetProductByCategoryResult> Handle(GetProductByCategoryCommand query, CancellationToken cancellationToken)
         {
-        var products = await session.Query<Product>().Where(p => p.Category.Contains(query.Category)).ToListAsync();
+        var products = await session.Query<Product>().Where(p => p.Categories.Contains(query.Category)).ToListAsync();
         return new GetProductByCategoryResult(products);
         }
     }
