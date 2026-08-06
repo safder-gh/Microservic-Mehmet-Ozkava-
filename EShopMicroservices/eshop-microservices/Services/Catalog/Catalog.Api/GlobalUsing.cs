@@ -3,3 +3,8 @@ global using Mapster;
 global using MediatR;
 global using BuidingBlocks.CQRS;
 global using Catalog.Api.Model;
+global using Marten;
+global using Catalog.Api.Exceptions;
+global using FluentValidation;
+global using BuidingBlocks.Bahaviors;
+global using BuidingBlocks.Exceptions.Handler;
