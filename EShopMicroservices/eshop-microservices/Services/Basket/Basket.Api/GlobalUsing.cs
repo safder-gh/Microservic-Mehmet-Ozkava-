@@ -7,3 +7,4 @@ global using BuidingBlocks.Exceptions;
 global using BuidingBlocks.Exceptions.Handler;
 global using Marten;
 global using Basket.Api.Basket.StoreBasket; 
+global using Microsoft.Extensions.Caching.Distributed;
