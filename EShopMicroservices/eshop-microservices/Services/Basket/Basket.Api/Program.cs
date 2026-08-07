@@ -1,7 +1,10 @@
 
+using Basket.Api.Data;
+using FluentValidation;
+using Weasel.Storage;
+
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddCarter(new DependencyContextAssemblyCatalog([typeof(Program).Assembly]));
-
 builder.Services.AddMediatR(config =>
 {
     config.RegisterServicesFromAssembly(typeof(Program).Assembly);
@@ -9,22 +12,20 @@ builder.Services.AddMediatR(config =>
     config.AddOpenBehavior(typeof(LoggingBehavior<,>));
 });
 builder.Services.AddValidatorsFromAssembly(typeof(Program).Assembly);
+builder.Services.AddExceptionHandler<CustomExceptionHandler>();
 builder.Services.AddMarten(option =>
 {
     option.Connection(builder.Configuration.GetConnectionString("database")!);
+    option.Schema.For<ShoppingCart>().Identity(sc=>sc.UserName);
 }).UseLightweightSessions();
-if (builder.Environment.IsDevelopment()) builder.Services.InitializeMartenWith<CatalogInitialData>();
-builder.Services.AddExceptionHandler<CustomExceptionHandler>();
-builder.Services.AddHealthChecks()
-    .AddNpgSql(builder.Configuration.GetConnectionString("database")!);
+builder.Services.AddScoped<IBasketRepository, BasketRepository>();
+// Add services to the container.
+
 var app = builder.Build();
 app.MapCarter();
 app.UseExceptionHandler(options =>
 {
 
 });
-app.UseHealthChecks("/health", new HealthCheckOptions
-    {
-ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
-    });
 app.Run();
+

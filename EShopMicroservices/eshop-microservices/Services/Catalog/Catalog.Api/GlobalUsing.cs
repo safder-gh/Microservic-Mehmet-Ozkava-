@@ -8,3 +8,6 @@ global using Catalog.Api.Exceptions;
 global using FluentValidation;
 global using BuidingBlocks.Bahaviors;
 global using BuidingBlocks.Exceptions.Handler;
+global using Catalog.Api.Data;
+global using HealthChecks.UI.Client;
+global using Microsoft.AspNetCore.Diagnostics.HealthChecks;

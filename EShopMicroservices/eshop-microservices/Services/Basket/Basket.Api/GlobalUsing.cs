@@ -1,0 +1,9 @@
+﻿global using Basket.Api.Models;
+global using BuidingBlocks.CQRS;
+global using Carter;
+global using BuidingBlocks.Bahaviors;
+global using FluentValidation;
+global using BuidingBlocks.Exceptions;
+global using BuidingBlocks.Exceptions.Handler;
+global using Marten;
+global using Basket.Api.Basket.StoreBasket; 
