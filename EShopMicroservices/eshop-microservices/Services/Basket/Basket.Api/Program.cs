@@ -1,6 +1,8 @@
 
 using Basket.Api.Data;
 using FluentValidation;
+using HealthChecks.UI.Client;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Weasel.Storage;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -25,12 +27,18 @@ builder.Services.AddStackExchangeRedisCache(options =>
     options.Configuration = builder.Configuration.GetConnectionString("Redis");
 });
 // Add services to the container.
-
+builder.Services.AddHealthChecks()
+    .AddNpgSql(builder.Configuration.GetConnectionString("database")!)
+    .AddRedis(builder.Configuration.GetConnectionString("Redis")!); ;
 var app = builder.Build();
 app.MapCarter();
 app.UseExceptionHandler(options =>
 {
 
 });
+app.UseHealthChecks("/health", new HealthCheckOptions
+    {
+    ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+    });
 app.Run();
 
