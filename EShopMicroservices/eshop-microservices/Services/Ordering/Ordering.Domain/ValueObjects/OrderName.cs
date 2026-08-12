@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Ordering.Domain.ValueObjects;
+
+public record  class OrderName
+    {
+    private const int DefaultLength = 5; 
+    public string Value { get; }
+    private OrderName(string value) => Value = value;
+    public static OrderName Of(string value)
+        {
+        ArgumentNullException.ThrowIfNullOrWhiteSpace(value);
+        ArgumentOutOfRangeException.ThrowIfNotEqual(value.Length,DefaultLength);
+        return new OrderName(value);
+        }
+    }
+

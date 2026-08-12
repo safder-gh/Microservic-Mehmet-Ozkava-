@@ -1,18 +1,24 @@
 <Solution>
   <Folder Name="/BuildingBlocks/">
-    <Project Path="BuidingBlocks/BuidingBlocks/BuidingBlocks.csproj" Id="9b938c07-fd0d-4b66-a39f-d56103f391c7" />
+    <Project Path="E:/safder_ghauri/Microservices(MehmatOzkava)/EShopMicroservices/eshop-microservices/BuidingBlocks/BuidingBlocks/BuidingBlocks.csproj" Id="9b938c07-fd0d-4b66-a39f-d56103f391c7" />
   </Folder>
   <Folder Name="/Services/" />
   <Folder Name="/Services/Basket/">
-    <Project Path="Services/Basket/Basket.Api/Basket.Api.csproj" Id="80c48b96-6feb-45f6-aec0-23651cb72a70" />
+    <Project Path="E:/safder_ghauri/Microservices(MehmatOzkava)/EShopMicroservices/eshop-microservices/Services/Basket/Basket.Api/Basket.Api.csproj" Id="80c48b96-6feb-45f6-aec0-23651cb72a70" />
   </Folder>
   <Folder Name="/Services/Catalog/">
-    <Project Path="Services/Catalog/Catalog.Api/Catalog.Api.csproj" />
+    <Project Path="E:/safder_ghauri/Microservices(MehmatOzkava)/EShopMicroservices/eshop-microservices/Services/Catalog/Catalog.Api/Catalog.Api.csproj" />
   </Folder>
   <Folder Name="/Services/Discount/">
-    <Project Path="Services/Discount/Discount.Grpc/Discount.Grpc.csproj" Id="0a2c8806-a292-42cc-86fc-e9216db48ec3" />
+    <Project Path="E:/safder_ghauri/Microservices(MehmatOzkava)/EShopMicroservices/eshop-microservices/Services/Discount/Discount.Grpc/Discount.Grpc.csproj" Id="0a2c8806-a292-42cc-86fc-e9216db48ec3" />
   </Folder>
-  <Project Path="docker-compose.dcproj">
+  <Folder Name="/Services/Ordering/">
+    <Project Path="E:/safder_ghauri/Microservices(MehmatOzkava)/EShopMicroservices/eshop-microservices/Services/Ordering/Ordering.Api/Ordering.Api.csproj" Id="efa80a95-5e52-417a-8031-f0984d812144" />
+    <Project Path="E:/safder_ghauri/Microservices(MehmatOzkava)/EShopMicroservices/eshop-microservices/Services/Ordering/Ordering.Application/Ordering.Application.csproj" Id="62cad3d4-c935-47d0-960a-117b0f43e147" />
+    <Project Path="E:/safder_ghauri/Microservices(MehmatOzkava)/EShopMicroservices/eshop-microservices/Services/Ordering/Ordering.Domain/Ordering.Domain.csproj" Id="8e5894fe-da0d-4b02-af92-1b5d963eaaec" />
+    <Project Path="E:/safder_ghauri/Microservices(MehmatOzkava)/EShopMicroservices/eshop-microservices/Services/Ordering/Ordering.Infrastructure/Ordering.Infrastructure.csproj" />
+  </Folder>
+  <Project Path="E:/safder_ghauri/Microservices(MehmatOzkava)/EShopMicroservices/eshop-microservices/docker-compose.dcproj">
     <Build />
   </Project>
 </Solution>
