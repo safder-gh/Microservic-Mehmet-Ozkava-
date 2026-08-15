@@ -1,11 +1,4 @@
 
-using Basket.Api.Data;
-using Discount.Grpc;
-using FluentValidation;
-using HealthChecks.UI.Client;
-using Microsoft.AspNetCore.Diagnostics.HealthChecks;
-using Weasel.Storage;
-
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddCarter(new DependencyContextAssemblyCatalog([typeof(Program).Assembly]));
 builder.Services.AddMediatR(config =>
