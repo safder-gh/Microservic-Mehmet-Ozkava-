@@ -12,3 +12,5 @@ global using Ordering.Application.Orders.Queries.GetOrders;
 global using Ordering.Application.Orders.Queries.GetOrdersByCustomer;
 global using Ordering.Infraestructure.Data.Extensions;
 global using Ordering.Infrastructure;
+global using Ordering.Application.Orders.Queries.GetOrdersByName; 
+global using BuidingBlocks.Exceptions.Handler;

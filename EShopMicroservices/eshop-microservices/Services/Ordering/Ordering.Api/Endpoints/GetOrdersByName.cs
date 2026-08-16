@@ -1,8 +1,4 @@
-﻿
-
-
-
-namespace Ordering.API.Endpoints;
+﻿namespace Ordering.API.Endpoints;
 
 //- Accepts a name parameter.
 //- Constructs a GetOrdersByNameQuery.

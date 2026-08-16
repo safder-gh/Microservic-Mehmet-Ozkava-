@@ -1,4 +1,4 @@
-﻿using Ordering.Domain.Events;
+﻿
 
 namespace Ordering.Domain.Models;
 
