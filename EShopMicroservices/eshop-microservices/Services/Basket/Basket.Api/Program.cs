@@ -1,4 +1,5 @@
 
+using BuildingBlocks.Messaging.MassTransit;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddCarter(new DependencyContextAssemblyCatalog([typeof(Program).Assembly]));
 builder.Services.AddMediatR(config =>
@@ -20,6 +21,7 @@ builder.Services.AddStackExchangeRedisCache(options =>
 {
     options.Configuration = builder.Configuration.GetConnectionString("Redis");
 });
+builder.Services.AddMessageBroker(builder.Configuration);
 // Add services to the container.
 builder.Services.AddHealthChecks()
     .AddNpgSql(builder.Configuration.GetConnectionString("database")!)
@@ -35,6 +37,7 @@ builder.Services.AddGrpcClient<DiscountProtoService.DiscountProtoServiceClient>(
         };
     return handler;
 });
+
 var app = builder.Build();
 app.MapCarter();
 app.UseExceptionHandler(options =>

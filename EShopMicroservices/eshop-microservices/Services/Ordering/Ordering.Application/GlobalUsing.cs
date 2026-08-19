@@ -2,10 +2,15 @@
 global using BuidingBlocks.CQRS;
 global using BuidingBlocks.Exceptions;
 global using BuidingBlocks.Pagination;
+global using BuildingBlocks.Messaging.MassTransit;
+global using BuildingBlocksMessaging.Events;
 global using FluentValidation;
+global using MassTransit;
 global using MediatR;
 global using Microsoft.EntityFrameworkCore;
+global using Microsoft.Extensions.Configuration;
 global using Microsoft.Extensions.DependencyInjection;
+global using Microsoft.FeatureManagement;
 global using Ordering.Application.Dtos;
 global using Ordering.Application.Exceptions;
 global using Ordering.Application.Extensions;

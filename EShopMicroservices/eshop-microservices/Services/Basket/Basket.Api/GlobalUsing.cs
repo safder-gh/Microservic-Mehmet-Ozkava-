@@ -1,5 +1,6 @@
 ﻿global using Basket.Api.Data;
 global using Basket.Api.Models;
+global using Basket.API.Dtos;
 global using BuidingBlocks.Bahaviors;
 global using BuidingBlocks.CQRS;
 global using BuidingBlocks.Exceptions;
@@ -8,6 +9,8 @@ global using Carter;
 global using Discount.Grpc;
 global using FluentValidation;
 global using HealthChecks.UI.Client;
+global using Mapster;
 global using Marten;
+global using MediatR;
 global using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 global using Microsoft.Extensions.Caching.Distributed;

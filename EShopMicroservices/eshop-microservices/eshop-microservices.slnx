@@ -1,5 +1,6 @@
 <Solution>
   <Folder Name="/BuildingBlocks/">
+    <Project Path="BuidingBlocks/BuildingBlocks.Messaging/BuildingBlocks.Messaging.csproj" Id="9f889064-3a0f-4b26-8ee4-e3c4793dce8e" />
     <Project Path="E:/safder_ghauri/Microservices(MehmatOzkava)/EShopMicroservices/eshop-microservices/BuidingBlocks/BuidingBlocks/BuidingBlocks.csproj" Id="9b938c07-fd0d-4b66-a39f-d56103f391c7" />
   </Folder>
   <Folder Name="/Services/" />
