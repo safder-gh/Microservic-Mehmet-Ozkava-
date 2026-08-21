@@ -22,6 +22,9 @@
     <Project Path="E:/safder_ghauri/Microservices(MehmatOzkava)/EShopMicroservices/eshop-microservices/Services/Ordering/Ordering.Domain/Ordering.Domain.csproj" Id="8e5894fe-da0d-4b02-af92-1b5d963eaaec" />
     <Project Path="E:/safder_ghauri/Microservices(MehmatOzkava)/EShopMicroservices/eshop-microservices/Services/Ordering/Ordering.Infrastructure/Ordering.Infrastructure.csproj" />
   </Folder>
+  <Folder Name="/WebApps/">
+    <Project Path="WebApps/Shopping.Web/Shopping.Web.csproj" Id="775cc5d5-9885-464b-bb95-0c85b0846b9a" />
+  </Folder>
   <Project Path="E:/safder_ghauri/Microservices(MehmatOzkava)/EShopMicroservices/eshop-microservices/docker-compose.dcproj">
     <Build />
   </Project>
